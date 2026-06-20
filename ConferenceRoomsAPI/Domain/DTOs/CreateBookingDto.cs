@@ -1,12 +1,17 @@
-﻿namespace ConferenceRoomsAPI.Domain.DTOs
+﻿using ConferenceRoomsAPI.Domain.Enums;
+
+namespace ConferenceRoomsAPI.Domain.DTOs
 {
     public class CreateBookingDto
     {
-        public int RoomId { get; set; }
+        public record CreateBookingRequest(Guid RoomId, DateTime StartTime, DateTime EndTime, List<Guid> ServiceIds);
 
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public record BookingConfirmationResponse(Guid BookingRoomId, Guid RoomId, string RoomName, 
+            DateTime StartTime, DateTime EndTime, decimal RoomCost, List<BookingServiceLineItem> Services, decimal TotalCost, BookingStatus Status);
 
-        public List<int> ServiceIds { get; set; }
+        public record BookingServiceLineItem(Guid ServiceId, string ServiceName, decimal Price);
+
+        public record BookingSummaryResponse(Guid BookingId, string RoomName, 
+            DateTime StartTime, DateTime EndTime, decimal TotalCost, BookingStatus Status);
     }
 }
