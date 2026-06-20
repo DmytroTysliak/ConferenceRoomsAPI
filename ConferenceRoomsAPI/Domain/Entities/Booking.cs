@@ -1,4 +1,6 @@
-﻿namespace ConferenceRoomsAPI.Domain.Entities
+﻿using ConferenceRoomsAPI.Domain.Enums;
+
+namespace ConferenceRoomsAPI.Domain.Entities
 {
     public class Booking
     {
