@@ -1,0 +1,22 @@
+﻿namespace ConferenceRoomsAPI.Domain.Entities
+{
+    public class Room
+    {
+        public Guid Id {  get; set; } = Guid.NewGuid();
+
+        public string Name { get; set; } = string.Empty;
+
+        public int Capacity { get; set; }
+
+        public decimal HourlyPrice { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        public ICollection<RoomService> RoomServices { get; set; } = new List<RoomService>();
+
+        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+    }
+}

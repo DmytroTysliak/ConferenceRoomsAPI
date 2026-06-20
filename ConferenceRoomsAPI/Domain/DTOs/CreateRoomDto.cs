@@ -1,4 +1,4 @@
-﻿namespace ConferenceRoomsAPI.DTOs
+﻿namespace ConferenceRoomsAPI.Domain.DTOs
 {
     public class CreateRoomDto
     {
@@ -6,7 +6,7 @@
 
         public int Capacity { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal HourlyPrice { get; set; }
 
         public List<int> ServiceIds { get; set; }
     }
