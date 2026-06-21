@@ -1,4 +1,5 @@
 ﻿using ConferenceRoomsAPI.Domain.Enums;
+using ConferenceRoomsAPI.Domain.Services;
 
 namespace ConferenceRoomsAPI.Domain.Entities
 {

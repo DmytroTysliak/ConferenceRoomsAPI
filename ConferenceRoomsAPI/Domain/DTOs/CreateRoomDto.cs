@@ -1,4 +1,6 @@
-﻿namespace ConferenceRoomsAPI.Domain.DTOs
+﻿using static ConferenceRoomsAPI.Domain.DTOs.ServiceDto;
+
+namespace ConferenceRoomsAPI.Domain.DTOs
 {
     public class CreateRoomDto
     {

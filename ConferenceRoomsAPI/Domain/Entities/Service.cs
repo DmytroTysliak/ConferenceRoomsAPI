@@ -1,4 +1,6 @@
-﻿namespace ConferenceRoomsAPI.Domain.Entities
+﻿using ConferenceRoomsAPI.Domain.Services;
+
+namespace ConferenceRoomsAPI.Domain.Entities
 {
     public class Service
     {
