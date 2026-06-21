@@ -2,12 +2,15 @@
 {
     public class CreateRoomDto
     {
-        public string Name { get; set; }
+        public record CreateRoomRequest(string Name, int Capacity, decimal HourlyPrice, List<Guid> ServiceIds);
 
-        public int Capacity { get; set; }
+        public record UpdateRoomRequest(string? Name, int? Capacity, decimal? HourlyPrice, List<Guid>? ServiceIds);
 
-        public decimal HourlyPrice { get; set; }
+        public record RoomAvailabilityRequest(DateTime StartTime, DateTime EndTime, int MinCapacity);
 
-        public List<int> ServiceIds { get; set; }
+        public record RoomSummaryResponse(Guid Id, string Name, int Capacity, decimal HourlyPrice);
+
+        public record RoomDetailResponse(Guid Id, string Name, int Capacity, decimal HourlyPrice, 
+            List<ServiceResponse> AvailableServices, DateTime CreatedAt, DateTime UpdatedAt);
     }
 }
