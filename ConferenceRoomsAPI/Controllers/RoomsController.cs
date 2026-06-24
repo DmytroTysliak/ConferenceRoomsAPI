@@ -53,7 +53,7 @@ namespace ConferenceRoomsAPI.Controllers
             var room = await _roomAppService.CreateRoomAsync(request);
 
             // 201 Created + Locaition header with link to new resorse
-            return CreatedAtAction(nameof(GetById), new { room.Id }, room);
+            return CreatedAtAction(nameof(GetById), new {id = room.Id }, room);
         }
 
         // Updates room information. Only provided  fields are changes
