@@ -4,7 +4,7 @@ using static ConferenceRoomsAPI.Domain.DTOs.CreateBookingDto;
 
 namespace ConferenceRoomsAPI.Controllers
 {
-    // Manages business analytics — revenue, occupancy, and popular services reports
+    // Manages room bookings — create, cancel, and retrieve booking details
     [ApiController]
     [Route("api/[controller]")]
     public class BookingsController : ControllerBase

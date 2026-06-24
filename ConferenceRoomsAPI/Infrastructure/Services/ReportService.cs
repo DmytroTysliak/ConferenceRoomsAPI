@@ -19,7 +19,7 @@ namespace ConferenceRoomsAPI.Infrastructure.Services
         }
 
         // Revenue per room for a given date range. Only counts confirmed bookings
-        public async Task<RevenueReportResponse> GetRevenueReportAsync(DateTime from, DateTime to)
+        public async Task<OccupancyReportResponse> GetRevenueReportAsync(DateTime from, DateTime to)
         {
             var bookings = await _bookingRepository.GetByDateRangeAsync(from, to);
             var confirmedBookings = bookings.Where(b => b.Status == BookingStatus.Confirmed).ToList(); 
@@ -34,7 +34,7 @@ namespace ConferenceRoomsAPI.Infrastructure.Services
             }).ToList();
 
 
-            return new RevenueReportResponse(
+            return new OccupancyReportResponse(
                 from,
                 to,
                 roomRevenue,

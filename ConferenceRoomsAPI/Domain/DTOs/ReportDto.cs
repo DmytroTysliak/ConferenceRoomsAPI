@@ -2,7 +2,7 @@
 {
     public class ReportDto
     {
-        public record RevenueReportResponse(DateTime From, DateTime To, List<RoomRevenueItem> Rooms, decimal GrandTotal);
+        public record OccupancyReportResponse(DateTime From, DateTime To, List<RoomRevenueItem> Rooms, decimal GrandTotal);
 
         public record RoomRevenueItem(Guid RoomId, string RoomName, int TotalBookings, decimal TotalRevenue);
 
