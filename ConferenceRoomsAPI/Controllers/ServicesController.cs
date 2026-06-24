@@ -4,7 +4,7 @@ using static ConferenceRoomsAPI.Domain.DTOs.ServiceDto;
 
 namespace ConferenceRoomsAPI.Controllers
 {
-    // Manages additional services available in rooms like projector, Wi-Fi and sound)
+    // Manages additional services available in rooms like projector, Wi-Fi and sound
     [ApiController]
     [Route("api/[controller]")]
     public class ServicesController : ControllerBase
