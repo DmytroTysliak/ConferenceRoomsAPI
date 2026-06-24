@@ -233,3 +233,4 @@ POST /api/bookings
 ```
 GET /api/reports/revenue?from=2024-09-01T00:00:00&to=2024-09-30T23:59:59
 ```
+
