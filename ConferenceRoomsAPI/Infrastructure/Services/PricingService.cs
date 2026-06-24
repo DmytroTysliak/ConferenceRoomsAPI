@@ -71,7 +71,7 @@ namespace ConferenceRoomsAPI.Infrastructure.Services
             };
         }
 
-        public decimal CalculateTotalCost(Room room, DateTime start, DateTime end, IEnumerable<Service> services>)
+        public decimal CalculateTotalCost(Room room, DateTime start, DateTime end, IEnumerable<Service> services)
         {
             var roomCost = CalculateRoomCost(room, start, end);
             var serviceCost = services.Sum(s => s.Price);
